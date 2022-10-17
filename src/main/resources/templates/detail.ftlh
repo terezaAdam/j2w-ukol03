@@ -13,8 +13,8 @@
 <body>
 <div class="detail">
     <div class="vizitka">
-        <div class="jmeno">Dita (Přikrylová) Formánková</div>
-        <div class="firma">Czechitas z. s.</div>
+        <div class="jmeno">${Vizitka.jmeno}</div>
+        <div class="firma">${Vizitka.firma}</div>
         <div class="udaje">
             <div class="adresa">
                 <div>Václavské náměstí 837/11</div>
