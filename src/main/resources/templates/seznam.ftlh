@@ -11,9 +11,9 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
-[#list vizitky as Vizitka]
-<div class="seznam">
 
+<div class="seznam">
+    [#list vizitky as Vizitka]
     <a href="/detail">
         <div class="vizitka">
             <div class="jmeno">${Vizitka.jmeno}</div>
@@ -25,13 +25,20 @@
                     <div>${Vizitka.celaAdresa}</div>
                 </div>
                 <div class="kontakty">
+                    [#if Vizitka.email?has_content]
                     <div><i class="las la-phone-alt"></i><span>${Vizitka.email}</span></div>
+                    [/#if]
+                    [#if Vizitka.telefon?has_content]
                     <div><i class="las la-phone-alt"></i><span>${Vizitka.telefon}</span></div>
+                    [/#if]
+                    [#if Vizitka.web?has_content]
                     <div><i class="las la-globe"></i><span>${Vizitka.web}</span></div>
+                    [/#if]
                 </div>
             </div>
         </div>
     </a>
     [/#list]
+</div>
 </body>
 </html>
